@@ -1,6 +1,4 @@
-﻿using System.Net.WebSockets;
-
-namespace AdventOfCode;
+﻿namespace AdventOfCode.Days;
 
 public class Day_01 : BaseDay
 {
@@ -13,7 +11,6 @@ public class Day_01 : BaseDay
 
     public override ValueTask<string> Solve_1()
     {
-
         int increase = 0;
         int? lastValue = null;
 
