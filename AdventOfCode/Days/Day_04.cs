@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode.Days;
 
+internal record BingoEntry(int value, bool hit)
+{
+    public int value { get; init; } = value;
+    public bool hit { get; set; } = hit;
+}
+
 internal class Day_04 : BaseDay
 {
     private readonly string _input;
@@ -46,35 +52,6 @@ internal class Day_04 : BaseDay
         return new ValueTask<string>("test1");
     }
 
-    private ValueTask<string> CalculateReturnFigure(object winningBoard)
-    {
-        throw new NotImplementedException();
-    }
-
-    private object CheckHits(List<BingoEntry>[,] boards, out object unknown)
-    {
-        throw new NotImplementedException();
-    }
-
-    private void MarkHits(List<BingoEntry>[,] boards, string num)
-    {
-        for (var i = 0; i < _numBoards; i++)
-        {
-            for (int j = 0; j < 5; j++)
-            {
-                var row = _boards[i,j];
-                for (var k = 0; k < row.Count; k++)
-                {
-                    var bingoEntry = row[k];
-                    if (bingoEntry.value == int.Parse(num))
-                    {
-                        bingoEntry.hit = true;
-                    }
-                }
-            }
-        }
-    }
-
     public override ValueTask<string> Solve_2()
     {
         return new ValueTask<string>("test2");
@@ -101,10 +78,35 @@ internal class Day_04 : BaseDay
 
         return board;
     }
+
+    private ValueTask<string> CalculateReturnFigure(object winningBoard)
+    {
+        throw new NotImplementedException();
+    }
+
+    private object CheckHits(List<BingoEntry>[,] boards, out object unknown)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void MarkHits(List<BingoEntry>[,] boards, string num)
+    {
+        for (var i = 0; i < _numBoards; i++)
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                var row = _boards[i, j];
+                for (var k = 0; k < row.Count; k++)
+                {
+                    var bingoEntry = row[k];
+                    if (bingoEntry.value == int.Parse(num))
+                    {
+                        bingoEntry.hit = true;
+                    }
+                }
+            }
+        }
+    }
 }
 
-internal record BingoEntry(int value, bool hit)
-{
-    public int value { get; init; } = value;
-    public bool hit { get; set; } = hit;
-}
+
