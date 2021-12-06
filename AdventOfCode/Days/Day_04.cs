@@ -10,7 +10,6 @@ namespace AdventOfCode.Days;
 
 internal record BingoEntry(int value, bool hit)
 {
-    public int value { get; init; } = value;
     public bool hit { get; set; } = hit;
 }
 
