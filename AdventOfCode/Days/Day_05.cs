@@ -74,12 +74,12 @@ public class Day_05 : BaseDay
         {
             var coords = line.Split(" -> ");
 
-            var start = coords[0].Split(',');
-            var end = coords[1].Split(',');
+            var p1= coords[0].Split(',');
+            var p2= coords[1].Split(',');
 
             coordList.Add((
-                new Coordinate(int.Parse(start[0]), int.Parse(start[1])),
-                new Coordinate(int.Parse(end[0]), int.Parse(end[1]))
+                new Coordinate(int.Parse(p1[0]), int.Parse(p1[1])),
+                new Coordinate(int.Parse(p2[0]), int.Parse(p2[1]))
             ));
         }
 
