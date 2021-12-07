@@ -13,7 +13,7 @@ internal record BingoEntry(int value, bool hit)
     public bool hit { get; set; } = hit;
 }
 
-internal class Day_04 : BaseDay
+public class Day_04 : BaseDay
 {
     private readonly string _input;
     private readonly string[] _splitInput;
