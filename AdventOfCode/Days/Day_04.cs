@@ -15,7 +15,6 @@ internal record BingoEntry(int value, bool hit)
 
 public class Day_04 : BaseDay
 {
-    private readonly string _input;
     private readonly string[] _splitInput;
     private readonly string[] _nums;
     private List<BingoEntry>[,] _boards;
