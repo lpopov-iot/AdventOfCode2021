@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdventOfCode.Days;
+﻿namespace AdventOfCode.Days;
 
 internal record Coordinate(int x, int y);
 
